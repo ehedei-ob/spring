@@ -1,6 +1,7 @@
 package dev.ehedei.exerciseob.services.impl;
 
 import dev.ehedei.exerciseob.domain.Laptop;
+import dev.ehedei.exerciseob.dtos.LaptopDto;
 import dev.ehedei.exerciseob.repositories.LaptopRepository;
 import dev.ehedei.exerciseob.services.LaptopService;
 import org.springframework.stereotype.Service;
@@ -19,5 +20,14 @@ public class LaptopServiceImpl implements LaptopService {
     @Override
     public List<Laptop> getAll() {
         return laptopRepository.findAll();
+    }
+
+    @Override
+    public Laptop saveOne(final LaptopDto laptopDto) {
+        final Laptop laptop = new Laptop();
+        laptop.setModel(laptopDto.getModel());
+        laptop.setManufacturer(laptopDto.getManufacturer());
+
+        return laptopRepository.save(laptop);
     }
 }

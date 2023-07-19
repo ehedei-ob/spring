@@ -2,6 +2,7 @@ package dev.ehedei.exerciseob;
 
 import dev.ehedei.exerciseob.domain.Laptop;
 import dev.ehedei.exerciseob.repositories.LaptopRepository;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;

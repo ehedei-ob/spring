@@ -4,6 +4,7 @@ import dev.ehedei.exerciseob.domain.Laptop;
 import dev.ehedei.exerciseob.dtos.LaptopDto;
 import dev.ehedei.exerciseob.repositories.LaptopRepository;
 import dev.ehedei.exerciseob.services.LaptopService;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
